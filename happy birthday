@@ -1,0 +1,80 @@
+export default function HappyBirthday41App() {
+  const balloons = ["🎈", "🎉", "✨", "🎂", "🥳", "💖"];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-pink-100 via-rose-50 to-amber-100 overflow-hidden relative font-sans">
+      <div className="absolute inset-0 pointer-events-none">
+        {[...Array(24)].map((_, i) => (
+          <span
+            key={i}
+            className="absolute text-2xl md:text-4xl animate-bounce"
+            style={{
+              left: `${(i * 13) % 100}%`,
+              top: `${(i * 17) % 100}%`,
+              animationDelay: `${(i % 7) * 0.25}s`,
+              animationDuration: `${2 + (i % 4)}s`,
+            }}
+          >
+            {balloons[i % balloons.length]}
+          </span>
+        ))}
+      </div>
+
+      <main className="relative z-10 flex items-center justify-center min-h-screen px-6 py-12">
+        <div className="max-w-3xl w-full">
+          <div className="bg-white/80 backdrop-blur-md rounded-[2rem] shadow-2xl border border-white/60 p-8 md:p-12 text-center">
+            <div className="inline-flex items-center gap-2 rounded-full bg-rose-100 px-4 py-2 text-rose-700 font-semibold text-sm tracking-wide mb-6">
+              <span>🎁</span>
+              <span>Made with love</span>
+            </div>
+
+            <h1 className="text-5xl md:text-7xl font-black tracking-tight text-rose-600 mb-4">
+              Happy 41st Birthday Hirda!
+            </h1>
+
+            <p className="text-xl md:text-2xl text-slate-700 leading-relaxed mb-8">
+              Wishing you a year filled with joy, laughter, happiness, and all the little moments like this campervan adventure that make life beautiful.
+            </p>
+
+            <div className="grid md:grid-cols-3 gap-4 mb-10">
+              <div className="rounded-3xl bg-gradient-to-br from-rose-50 to-pink-100 p-5 shadow-md">
+                <div className="text-3xl mb-2">🌟</div>
+                <h2 className="font-bold text-slate-800 mb-1">Celebrate Big</h2>
+                <p className="text-sm text-slate-600">Today is all about you and the amazing light you bring to others.</p>
+              </div>
+              <div className="rounded-3xl bg-gradient-to-br from-amber-50 to-yellow-100 p-5 shadow-md">
+                <div className="text-3xl mb-2">🎂</div>
+                <h2 className="font-bold text-slate-800 mb-1">Make a Wish</h2>
+                <p className="text-sm text-slate-600">May this next chapter be filled with exciting dreams coming true.</p>
+              </div>
+              <div className="rounded-3xl bg-gradient-to-br from-purple-50 to-fuchsia-100 p-5 shadow-md">
+                <div className="text-3xl mb-2">💛</div>
+                <h2 className="font-bold text-slate-800 mb-1">So Appreciated</h2>
+                <p className="text-sm text-slate-600">You deserve all the happiness and love that today can bring.</p>
+              </div>
+            </div>
+
+            <div className="rounded-[2rem] bg-slate-900 text-white p-6 md:p-8 shadow-xl mb-8">
+              <p className="text-lg md:text-xl italic leading-relaxed">
+                “Forty-one looks good on you — confident, kind, wise, and still full of sparkle.”
+              </p>
+            </div>
+
+            <a
+              href="https://www.youtube.com/watch?v=wz_6BXxI7xY&list=RDwz_6BXxI7xY&start_radio=1"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-block rounded-full px-8 py-4 text-lg font-bold bg-rose-500 text-white shadow-lg hover:scale-105 hover:bg-rose-600 transition"
+            >
+              Tap for a Birthday Cheer 🎊
+            </a>
+
+            <p className="mt-8 text-sm text-slate-500">
+              Crafted especially for a very special 41st birthday ✨
+            </p>
+          </div>
+        </div>
+      </main>
+    </div>
+  );
+}
